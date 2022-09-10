@@ -1,0 +1,90 @@
+:root {
+    --primary-color: #2E5D7F;
+    --secondary-color: #22537e;
+    --bg-color : #ECF8FF;
+    --success-color: rgb(48, 218, 71);
+    --info-color: #5797d0;
+    --danger-color: rgb(238, 75, 75);
+}
+
+body {
+    /* background-color: var(--bg-color); */
+    font-family: 'Roboto', 'sans-serif';
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 1.6rem;
+    /* font-weight: bold; */
+    /* color: var(--text-color); */
+    color: black;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.bg-red {
+    background-color: var(--danger-color);
+}
+.bg-blue {
+    background-color: var(--info-color);
+}
+.bg-green {
+    background-color: var(--success-color);
+}
+.bg-core {
+    background-color: var(--primary-color);
+}
+.top-head {
+    background-color: var(--secondary-color);
+    color: white;
+}
+.top-head ul {
+    list-style: none;
+}
+.top-head ul li img {
+    width: 3rem;
+}
+.top-head .logo-box {
+    background-color: white;
+    position: absolute;
+    left: 3rem;
+    top: 1rem;
+
+}
+.top-head .logo-box img {
+    width: 6rem;
+    height: 6rem;
+}
+
+/* Navigation */
+.top-nav {
+    padding-left:10rem;
+    margin: 0;
+}
+.top-nav ul {
+    list-style: none;
+}
+.top-nav ul li a {
+    padding: 1rem .5rem;
+    color: rgb(163, 163, 163);
+    text-decoration: none;
+    font-size: .8rem;
+}
+.top-nav ul li a i {
+    font-size: 1.1rem;
+}
+
+.top-nav ul li a:hover {
+    color: black;
+}
+.top-nav ul li .active {
+    color: black;
+}
