@@ -1,7 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DashboardController;
+use App\Http\Livewire\CategoryLivewire;
+use App\Http\Livewire\DashboardLivewire;
+use App\Http\Livewire\ProductLivewire;
+use App\Http\Livewire\SalesReportLivewire;
+use App\Http\Livewire\UserLivewire;
+use App\Http\Livewire\AdminLivewire;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +19,18 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
+// Route::get('/simlink', function () {
+//     return app('files')->link(storage_path('app/public'), public_path('storage'));
+// });
+
 Route::get('/', function () {
     return redirect('/dashboard');
 });
 
-Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/dashboard', DashboardLivewire::class);
+Route::get('/product', ProductLivewire::class);
+Route::get('/sales-report', SalesReportLivewire::class);
+Route::get('/category', CategoryLivewire::class);
+Route::get('/user', UserLivewire::class);
+Route::get('/admin', AdminLivewire::class);
+

@@ -88,3 +88,29 @@ h3 {
 .top-nav ul li .active {
     color: black;
 }
+.card-product .card-head{
+    height: 14rem;
+    overflow: hidden;
+    position: relative;
+}
+.card-product img {
+    /*margin-top: -4rem;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-category {
+    width: 10rem;
+    height: 10rem;
+    transition:  .2s transform;
+}
+.card-category:hover {
+    transform:  scale(1.06);
+    cursor: pointer;
+}
+
+.card-user {
+    
+}

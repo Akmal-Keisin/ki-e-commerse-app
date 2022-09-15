@@ -1,0 +1,80 @@
+
+<div class="px-5 mb-5">
+    @include('livewire.product_modal.add_product_modal')
+    @include('livewire.product_modal.detail_product_modal')
+
+    @if($msg = session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert" style="position: absolute; left: 50%; top: 1rem; transform: translateX(-50%);">
+          {{ $msg }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @elseif($msg = session('failed'))
+        <div class="alert alert-warning alert-dismissible fade show" role="alert" style="position: absolute; left: 50%; top: 1rem; transform: translateX(-50%);">
+          {{ $msg }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1>Product List</h1>
+        <div class="action-button">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addProductModal">
+              Add
+            </button>
+        </div>
+    </div>
+    <div class="card p-3">
+        <div class="row">
+            @forelse($productList as $product)
+                <div class="col-lg-3 mb-3">
+                    <div class="card p-2 card-product text-decoration-none text-dark">
+                        <div class="card-head">
+                            <img class="w-100" src="{{ asset('storage/' . $product->image)  }}">
+                        </div>  
+                        <div class="card-body p-0 mt-2">
+                            <h3 class="fw-bold m-0">{{ $product->name }}</h3>
+                            <ul class="d-flex p-0 mb-2" style="list-style: none;">
+                                <li>
+                                    <i class='bx bxs-star star-filled'></i>
+                                </li>
+                                <li>
+                                    <i class='bx bxs-star star-filled'></i>
+                                </li>
+                                <li>
+                                    <i class='bx bxs-star star-filled'></i>
+                                </li>
+                                <li>
+                                    <i class='bx bxs-star star-filled'></i>
+                                </li>
+                                <li>
+                                    <i class='bx bx-star star'></i>
+                                </li>
+                            </ul>
+                            <p class="">{{ $product->description }}.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            @if($product->active == 'active')
+                                <p class="p-0 m-0 text-success">Active</p>
+                            @else
+                                <p class="p-0 m-0 text-danger">Non Active</p>
+                            @endif
+                            <button wire:click="getProduct({{ $product->id }})" class="btn btn-primary" data-bs-target="#detailProduct" data-bs-toggle="modal">More Detail</button>
+                        </div>
+                    </div>
+                </div>
+            @empty
+                <h2 class="text-center">Product Empty</h2>
+            @endforelse
+        </div>
+    </div>
+</div>
+
+@push('javascript')
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script>
+    window.livewire.on('dataCreated', () => {
+        $('#addProductModal').modal('hide')
+        $('#addProduct')[0].reset()
+    })
+</script>
+@endpush

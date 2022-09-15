@@ -1,9 +1,7 @@
-@extends('layout.core')
+<div>
 @push('css')
-<link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}"> --}}
 @endpush
-@section('title', 'Dashboard')
-@section('content')
 <div class="px-5 mb-5">
     <div class="row justify-content-evenly align-items-center my-5">
         <div class="col m-1 p-3 info-card bg-green">
@@ -150,36 +148,25 @@
         </div>
     </div>
 </div>
-@endsection
 @push('javascript')
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-<script>
-    const { createApp } = Vue
-    const app = createApp({
-        data() {
-            return {
-                xValues : [50,60,70,80,90,100,110,120,130,140,150],
-                yValues : [7,8,8,9,9,9,10,11,14,14,15]
-            }
-        },
-        methods: {
-        },
-        mounted() {
-            new Chart("myChart", {
-                type: "line",
-                data: {
-                    labels: this.xValues,
-                    pointRadius: 1,
-                    datasets: [{
-                    backgroundColor: "rgba(236, 248, 255, .7)",
-                    borderColor: "#2E5D7F",
-                    data: this.yValues
-                    }]
-                },
-                // options:{...}
-            })
-        }
-    })
-    app.mount('#app')
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script>
+        const xValues = [50,60,70,80,90,100,110,120,130,140,150]
+        const yValues = [7,8,8,9,9,9,10,11,14,14,15]
+        new Chart("myChart", {
+            type: "line",
+            data: {
+                labels: xValues,
+                pointRadius: 1,
+                datasets: [{
+                backgroundColor: "rgba(236, 248, 255, .7)",
+                borderColor: "#2E5D7F",
+                data: yValues
+                }]
+            },
+            // options:{...}
+        })
+    </script>
 @endpush
+
+</div>
