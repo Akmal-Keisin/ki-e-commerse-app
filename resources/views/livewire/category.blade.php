@@ -19,7 +19,7 @@
         <h1>Category List</h1>
         <div class="action-button d-flex">
             <div class="input-group me-2">
-                <input type="text" class="form-control" name="search">
+                <input wire:model="search" type="text" class="form-control" name="search">
                 <button class="btn btn-primary">Search</button>
             </div>
             <!-- Button trigger category modal -->
@@ -30,7 +30,7 @@
     </div>
     <div class="card p-3">
         <div class="row">
-            @forelse($data as $category)
+            @forelse($categories as $category)
                 <div class="col-lg-2 mb-3 d-flex justify-content-center align-items-center flex-column">
                     <div data-bs-toggle="modal" data-bs-target="#productList" wire:click="getProductList({{ $category->id }})" class="card-category card p-4 text-decoration-none text-dark d-flex justify-content-center align-items-center" >
                         <img class="img-fluid" src="{{ asset('storage/' . $category->image) }}" alt="">
@@ -45,6 +45,7 @@
                 <h2 class="text-center">Category Empty</h2>
             @endforelse
         </div>
+        {{ $categories->links() }}
     </div>
 </div>
 

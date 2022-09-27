@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use Livewire\WithPagination;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rule;
@@ -12,7 +13,15 @@ use App\Models\Product;
 
 class CategoryLivewire extends Component
 {
-    protected $listeners = ['refresh' => '$refresh'];
+    use WithFileUploads;
+    use WithPagination;
+
+    public $search;
+    public $pageLimit = 10;
+    protected $paginationTheme = 'bootstrap';
+    protected $queryString = [
+        'search' => ['except' => '']
+    ];
     public $categoryId;
     public $data;
     public $productList = [];
@@ -21,8 +30,11 @@ class CategoryLivewire extends Component
 
     public function render()
     {
-        $this->data = Category::all();
-        return view('livewire.category');
+        $this->data = new Category();
+        $categories = $this->data->where('name', 'like', '%'.$this->search.'%')->paginate($this->pageLimit);
+        return view('livewire.category', [
+                'categories' => $categories
+        ]);
     }
 
     public function getProductList($id) {
@@ -42,8 +54,6 @@ class CategoryLivewire extends Component
         $this->name = '';
         $this->image = '';
     }
-
-    use WithFileUploads;
     public function store() {
         try {
             // dd($this->image);
@@ -122,7 +132,7 @@ class CategoryLivewire extends Component
             if ($category->image) {
                 Storage::disk('public')->delete($category->image);
             }
-            $this->data->where('id', $category->id)->first()->delete();
+            Product::where('category_id', $this->categoryId)->update(['category_id' => 1]);
             $category->delete();
             $this->resetInput();
             $this->emit('dataDeleted');

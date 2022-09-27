@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->foreignId('category_id');
             $table->string('name');
+            $table->float('rating', 5, 0);
             $table->text('description');
             $table->string('image');
             $table->enum('active', ['active', 'nonActive'])->default('nonActive');

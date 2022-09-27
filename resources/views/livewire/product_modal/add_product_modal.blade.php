@@ -34,6 +34,11 @@
                 <input wire:model="productImage" type="file" name="productImage" id="image" class="form-control">
                 @error('productImage') <span class="text-danger">{{ $message }}</span> @enderror
             </div>
+            <div class="mb-3">
+                <label for="rating" class="form-label">Rating :</label>
+                <input wire:model="productRating" type="number" step="0.1" name="productRating" id="rating" min="1" max="5" class="form-control">
+                @error('productRating') <span class="text-danger">{{ $message }}</span> @enderror
+            </div>
         </form>
       </div>
       <div class="modal-footer">

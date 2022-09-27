@@ -11,433 +11,70 @@
             <div class="col-4">
                 <div class="m-1 p-3 info-card bg-green">
                     <h2 class="fw-bold">Total Penghasilan :</h2>
-                    <p>Rp. 300.000.000,00</p>
+                    <p>{{ $totalPenghasilan }}</p>
                 </div>
                 <div class="m-1 p-3 info-card bg-red">
                     <h2 class="fw-bold">Total Pengeluaran :</h2>
-                    <p>Rp. 300.000.000,00</p>
+                    <p>{{ $totalPengeluaran }}</p>
                 </div>
-                <div class="m-1 p-3 info-card bg-blue">
-                    <h2 class="fw-bold">Target Bulanan Penghasilan :</h2>
-                    <p>Rp. 300.000.000,00</p>
-                </div>  
             </div>
         </div>
-        <div class="row justify-content-center mt-3">
-            <div class="col-6">
-                <div class="d-flex justify-content-between align-items-center">
-                    <h1>Checkout Bulan Ini</h1>
-                </div>
-                <div class="card p-3 overflow-auto" style="height: 30rem;">
-                    <table class="table table-striped align-middle">
-                        <thead>
-                          <tr class="bg-blue">
-                            <th scope="col">#</th>
-                            <th scope="col">Tangal</th>
-                            <th scope="col">User</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Product</th>
-                            <th scope="col">Qty</th>
-                            <th scope="col">Cost</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="col-6">
-                <h1>Top Valueable User</h1>
-                <div class="card p-3 overflow-auto" style="height: 30rem;">
-                    <table class="table table-striped align-middle">
-                        <thead>
-                          <tr class="bg-blue">
-                            <th scope="col">#</th>
-                            <th scope="col">User</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Total Checkout</th>
-                            <th scope="col">Checkout Count</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">Derry</td>
-                                <td scope="col">derry@gmail.com</td>
-                                <td scope="col">Rp. 130.000.000,00</td>
-                                <td scope="col">200</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">2</td>
-                                <td scope="col">Derry</td>
-                                <td scope="col">derry@gmail.com</td>
-                                <td scope="col">Rp. 130.000.000,00</td>
-                                <td scope="col">200</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">3</td>
-                                <td scope="col">Derry</td>
-                                <td scope="col">derry@gmail.com</td>
-                                <td scope="col">Rp. 130.000.000,00</td>
-                                <td scope="col">200</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">4</td>
-                                <td scope="col">Derry</td>
-                                <td scope="col">derry@gmail.com</td>
-                                <td scope="col">Rp. 130.000.000,00</td>
-                                <td scope="col">200</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">5</td>
-                                <td scope="col">Derry</td>
-                                <td scope="col">derry@gmail.com</td>
-                                <td scope="col">Rp. 130.000.000,00</td>
-                                <td scope="col">200</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div> 
-            </div>
+        <h1 class="mt-3">List Checkout</h1>
+        <div class="card p-3 overflow-auto" style="height: 30rem;">
+            <table class="table table-striped align-middle">
+                <thead>
+                  <tr class="bg-blue">
+                    <th scope="col">#</th>
+                    <th scope="col">Tangal</th>
+                    <th scope="col">User</th>
+                    <th scope="col">No. Hp</th>
+                    <th scope="col">Cost</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    @forelse($checkout as $item)
+                    <tr>
+                        <td scope="col">{{ $loop->iteration }}</td>
+                        <td scope="col">{{ $item->created_at }}</td>
+                        <td scope="col">{{ $item->user->name }}</td>
+                        <td scope="col">{{ $item->user->phone_number }}</td>
+                        <td scope="col">{{ $item->final_cost_total }}</td>
+                        <td scope="col"><button class="btn-primary btn btn-sm">Detail</button></td>
+                    </tr>
+                    @empty
+
+                    @endempty
+                </tbody>
+            </table>
         </div>
-        <div class="row justify-content-center mt-3">
-            <div class="col-6">
-                <h1>Top Sold Product</h1>
-                <div class="card p-3 overflow-auto" style="height: 30rem;">
-                    <table class="table table-striped align-middle">
-                        <thead>
-                          <tr class="bg-blue">
-                            <th scope="col">#</th>
-                            <th scope="col">Tangal</th>
-                            <th scope="col">User</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Product</th>
-                            <th scope="col">Qty</th>
-                            <th scope="col">Cost</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="col-6">
-                <h1>Top Sold Category</h1>
-                <div class="card p-3 overflow-auto" style="height: 30rem;">
-                    <table class="table table-striped align-middle">
-                        <thead>
-                          <tr class="bg-blue">
-                            <th scope="col">#</th>
-                            <th scope="col">Tangal</th>
-                            <th scope="col">User</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Product</th>
-                            <th scope="col">Qty</th>
-                            <th scope="col">Cost</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                            <tr>
-                                <td scope="col">1</td>
-                                <td scope="col">12-09-2022</td>
-                                <td scope="col">Snail</td>
-                                <td scope="col">snail@gmail.com</td>
-                                <td scope="col">Legion 5 Pro</td>
-                                <td scope="col">1</td>
-                                <td scope="col">Rp. 23.000.000,00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+        <h1 class="mt-3">Liset Pengeluaran</h1>
+        <div class="card p-3 overflow-auto" style="height: 30rem;">
+            <table class="table table-striped align-middle">
+                <thead>
+                  <tr class="bg-blue">
+                    <th scope="col">#</th>
+                    <th scope="col">Admin</th>
+                    <th scope="col">No. Hp</th>
+                    <th scope="col">Total Pengeluaran</th>
+                    <th scope="col">Tipe</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    @foreach($expense as $item)
+                    <tr>
+                        <td scope="col">{{ $item->iteration }}</td>
+                        <td scope="col">{{ $item->admin_id }}</td>
+                        <td scope="col">derry@gmail.com</td>
+                        <td scope="col">{{ $item->final_cost_total }}</td>
+                        <td scope="col">{{ $item->type }}</td>
+                        <td scope="col"><button class="btn-primary btn btn-sm">Detail</button></td>
+                    </tr>
+
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
 @push('javascript')

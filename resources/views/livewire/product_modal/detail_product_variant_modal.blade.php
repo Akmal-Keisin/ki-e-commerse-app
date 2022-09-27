@@ -1,5 +1,5 @@
 <!-- Detail Modal -->
-<div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModal" aria-hidden="true">
+<div wire:ignore.self class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModal" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -10,36 +10,25 @@
         <table class="table table-borderless">
             <tr>
                 <th>Name</th>
-                <td>Variant 1</td>
+                <td>{{ $variantName }}</td>
             </tr>
             <tr>
                 <th>Image</th>
                 <td>
-                    <img style="max-width: 10rem" src="{{ asset('img/shoes/jordan2.png') }}" alt="">
+                    <img style="max-width: 10rem" src="{{ asset('storage/'. $variantImage) }}" alt="">
                 </td>
             </tr>
             <tr>
                 <th>Size</th>
                 <td>
                     <ul style="list-style:none;max-height:10rem;" class="m-0 p-0 overflow-auto">
-                        <li class="d-flex align-items-center mb-1">
-                            <span class="bg-core text-light px-3 py-2">39</span>
-                            <span class="ms-2">20pcs</span>
-                        </li>
-                        <li class="d-flex align-items-center mb-1">
-                            <span class="bg-core text-light px-3 py-2">40</span>
-                            <span class="ms-2">10pcs</span>
-                            <span class="text-danger ms-1">(Perlu Stock)</span>
-                        </li>
-                        <li class="d-flex align-items-center mb-1">
-                            <span class="bg-core text-light px-3 py-2">42</span>
-                            <span class="ms-2">5pcs</span>
-                            <span class="text-danger ms-1">(Perlu Stock)</span>
-                        </li>
-                        <li class="d-flex align-items-center mb-1">
-                            <span class="bg-core text-light px-3 py-2">43</span>
-                            <span class="ms-2">20pcs</span>
-                        </li>
+                        @foreach($variantSizeList as $size => $value)
+                            <li class="d-flex align-items-center mb-1">
+                                <span class="bg-core text-light px-3 py-2">{{ $value['size'] }}</span>
+                                <span class="ms-2">{{ $value['stock'] }}</span>
+                                <span class="ms-2">({{ $value['price'] }})</span>
+                            </li>
+                        @endforeach
                     </ul>
                 </td>
             </tr>
