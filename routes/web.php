@@ -30,7 +30,7 @@ Route::middleware('guest')->group(function() {
 });
 
 
-// Route::middleware('auth')->group(function() {
+Route::middleware('auth')->group(function() {
     Route::get('/', function () {
         return redirect('/dashboard');
     });
@@ -43,5 +43,5 @@ Route::middleware('guest')->group(function() {
     Route::get('/admin', AdminLivewire::class);
 
     Route::post('/logout', [AuthWebController::class, 'authLogout']);
-// });
+});
 
