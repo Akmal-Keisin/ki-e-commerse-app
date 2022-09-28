@@ -3,13 +3,13 @@
         <img src="{{ asset('img/logo.jpeg') }}" alt="">
     </div>
     <ul class="d-flex align-items-center justify-content-end p-2 m-0">
-        <li>Akmal Keisin ALfateh</li>
+        <li>{{ Auth::user()->name }}</li>
         <li class="ms-2">
             <img class="border rounded-circle" src="{{ asset('img/default-user.png') }}" alt="">
         </li>
     </ul>
 </header>
-<nav class="top-nav">
+<nav class="top-nav d-flex justify-content-between">
     <ul class="d-flex">
         <li>
             <a href="/" class="d-flex justify-content-start align-items-center {{ Request::is('dashboard*') ? 'active' : '' }}">
@@ -46,6 +46,17 @@
                 <i class='me-1 bx bx-chip'></i>
                 Admin
             </a>
+        </li>
+    </ul>
+    <ul class="d-flex me-4">
+        <li class="d-flex justify-content-start align-items-center">
+            <form action="/logout" class="" method="post">
+                @csrf
+                <button class="btn d-flex justify-content-start align-items-center border-none">
+                    <i class='me-1 bx bx-log-out'></i>
+                    Logout
+                </button>
+            </form>
         </li>
     </ul>
 </nav>

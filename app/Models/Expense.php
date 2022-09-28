@@ -9,4 +9,8 @@ class Expense extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+
+    public function admin() {
+        return $this->belongsTo(User::class);
+    }
 }

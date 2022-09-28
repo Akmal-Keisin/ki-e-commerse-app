@@ -1,6 +1,7 @@
 @push('css')
 @endpush
     <div class="px-5 mb-5">
+        @section('title', 'User')
         @include('livewire.user_modal.add_user_modal')
         @include('livewire.user_modal.edit_user_modal')
         @include('livewire.user_modal.detail_user_modal')

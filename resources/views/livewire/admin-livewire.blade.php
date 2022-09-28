@@ -1,6 +1,7 @@
 @push('css')
 @endpush
 <div class="px-5 mb-5">
+    @section('title', 'Admin')
     @include('livewire.admin_modal.add_admin_modal')
     @include('livewire.admin_modal.edit_admin_modal')
     @include('livewire.admin_modal.detail_admin_modal')

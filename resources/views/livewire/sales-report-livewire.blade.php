@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 @endpush
     <div class="px-5 mb-5">
+        @section('title', 'Sales Report')
         <div class="row justify-content-center">
             <div class="col-8">
                 <div class="card p-3 h-100">
@@ -47,8 +48,9 @@
                     @endempty
                 </tbody>
             </table>
+            {{ $checkout->links() }}
         </div>
-        <h1 class="mt-3">Liset Pengeluaran</h1>
+        <h1 class="mt-3">List Pengeluaran</h1>
         <div class="card p-3 overflow-auto" style="height: 30rem;">
             <table class="table table-striped align-middle">
                 <thead>
@@ -64,9 +66,9 @@
                 <tbody>
                     @foreach($expense as $item)
                     <tr>
-                        <td scope="col">{{ $item->iteration }}</td>
-                        <td scope="col">{{ $item->admin_id }}</td>
-                        <td scope="col">derry@gmail.com</td>
+                        <td scope="col">{{ $loop->iteration }}</td>
+                        <td scope="col">{{ $item->admin->name }}</td>
+                        <td scope="col">{{ $item->admin->phone_number }}</td>
                         <td scope="col">{{ $item->final_cost_total }}</td>
                         <td scope="col">{{ $item->type }}</td>
                         <td scope="col"><button class="btn-primary btn btn-sm">Detail</button></td>
@@ -75,6 +77,7 @@
                     @endforeach
                 </tbody>
             </table>
+            {{ $expense->links() }}
         </div>
     </div>
 @push('javascript')

@@ -37,6 +37,12 @@ class ApiProductController extends Controller
             foreach($imageSlider as $image) {
                 $image['image'] = env('APP_URL') . '/storage/' . $image['image'];
             }
+            $product['variants'] = $product->variants;
+            if (count($product['variants']) > 0) {
+                foreach($product['variants'] as $variant) {
+                    $product['variants']['sizes'] = $variant->sizes;
+                }
+            }
             return response()->json([
                 'status' => 200,
                 'info' => 'Data obtained successfully',

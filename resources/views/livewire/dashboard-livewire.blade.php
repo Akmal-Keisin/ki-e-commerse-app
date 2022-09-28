@@ -3,6 +3,7 @@
     {{-- <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}"> --}}
 @endpush
 <div class="px-5 mb-5">
+    @section('title', 'Dashboard')
     <div class="row justify-content-evenly align-items-center my-5">
         <div class="col m-1 p-3 info-card bg-green">
             <h2 class="fw-bold">Penghasilan</h2>

@@ -1,5 +1,6 @@
 
 <div class="px-5 mb-5">
+    @section('title', 'Product')
     @include('livewire.product_modal.add_product_modal')
     @include('livewire.product_modal.detail_product_modal')
 

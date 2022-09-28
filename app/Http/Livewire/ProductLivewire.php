@@ -8,6 +8,7 @@ use Livewire\WithPagination;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Category;
 use App\Models\Expense;
 use App\Models\ExpenseDetail;
@@ -144,7 +145,7 @@ class ProductLivewire extends Component
         }
 
         $expenses = Expense::create([
-            'admin_id' => 1,
+            'admin_id' => Auth::user()->id,
             'final_cost_total' => $finalCostTotal,
             'type' => 'New'
         ]);

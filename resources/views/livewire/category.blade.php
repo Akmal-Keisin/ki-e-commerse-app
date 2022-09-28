@@ -1,5 +1,6 @@
 
 <div class="px-5 mb-5">
+    @section('title', 'Category')
     @include('livewire.category_modal.add_category_modal')
     @include('livewire.category_modal.edit_category_modal')
     @include('livewire.category_modal.delete_category_modal')

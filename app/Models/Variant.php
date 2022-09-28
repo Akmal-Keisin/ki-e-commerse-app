@@ -10,7 +10,7 @@ class Variant extends Model
     use HasFactory;
     protected $guarded = ['id'];
 
-    public function size() 
+    public function sizes() 
     {
         return $this->hasMany(Size::class);
     }
@@ -24,7 +24,7 @@ class Variant extends Model
         parent::boot();
 
         static::deleting(function($variant) { // before delete() method call this
-            $variant->size()->delete();
+            $variant->sizes()->delete();
         });
     }
 }
